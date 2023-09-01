@@ -99,6 +99,7 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="643.2,2433.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
@@ -164,20 +165,21 @@
                 </InArgument>
               </ui:ReadRange.Range>
             </ui:ReadRange>
-            <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filtrar NORTE e retirar colunas desnecessárias" DataTable="[dt_data]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="484.8,193.6" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dt_data]" SelectColumnsMode="Keep">
+            <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filtrar NORTE e retirar colunas desnecessárias" DataTable="[dt_data]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="484.8,193.6" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[dt_data]" SelectColumnsMode="Keep">
               <ui:FilterDataTable.Filters>
                 <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                   <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="CONTAINS" />
                 </scg:List>
               </ui:FilterDataTable.Filters>
               <ui:FilterDataTable.SelectColumns>
-                <scg:List x:TypeArguments="InArgument" Capacity="8">
+                <scg:List x:TypeArguments="InArgument" Capacity="16">
                   <InArgument x:TypeArguments="x:Int32">[2]</InArgument>
-                  <InArgument x:TypeArguments="x:Int32">[4]</InArgument>
+                  <InArgument x:TypeArguments="x:Int32">[3]</InArgument>
                   <InArgument x:TypeArguments="x:Int32">[5]</InArgument>
                   <InArgument x:TypeArguments="x:Int32">[6]</InArgument>
                   <InArgument x:TypeArguments="x:Int32">[7]</InArgument>
-                  <InArgument x:TypeArguments="x:Int32">[9]</InArgument>
+                  <InArgument x:TypeArguments="x:Int32">[8]</InArgument>
+                  <InArgument x:TypeArguments="x:Int32">[10]</InArgument>
                   <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
                   <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
                 </scg:List>

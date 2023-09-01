@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SendTeams" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SendTeams" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="dt_dataHtml" Type="InArgument(x:String)" />
     <x:Property Name="usuario" Type="InArgument(x:String)" />
@@ -6,7 +6,7 @@
   <this:SendTeams.usuario>
     <InArgument x:TypeArguments="x:String" />
   </this:SendTeams.usuario>
-  <sap:VirtualizedContainerService.HintSize>632.8,2498.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>848,2497.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -102,13 +102,13 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="643.2,2433.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+  <Sequence sap:VirtualizedContainerService.HintSize="643.2,2432.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="excels\" sap:VirtualizedContainerService.HintSize="580.8,2321.6" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+    <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="excels\" sap:VirtualizedContainerService.HintSize="580.8,2320.8" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
       <ui:ForEachFileX.Body>
         <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
           <ActivityAction.Argument1>
@@ -117,7 +117,7 @@
           <ActivityAction.Argument2>
             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
           </ActivityAction.Argument2>
-          <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="547.2,2058.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="547.2,2057.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dt_data" />
               <Variable x:TypeArguments="x:String" Name="dt_dataString" />
@@ -128,7 +128,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[CurrentFile.FullName]" />
-            <Assign sap:VirtualizedContainerService.HintSize="484.8,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="484.8,80.8" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[usuario]</OutArgument>
               </Assign.To>
@@ -165,20 +165,21 @@
                 </InArgument>
               </ui:ReadRange.Range>
             </ui:ReadRange>
-            <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filtrar NORTE e retirar colunas desnecessárias" DataTable="[dt_data]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="484.8,193.6" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[dt_data]" SelectColumnsMode="Keep">
+            <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filtrar NORTE e retirar colunas desnecessárias" DataTable="[dt_data]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="484.8,193.6" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dt_data]" SelectColumnsMode="Keep">
               <ui:FilterDataTable.Filters>
                 <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                   <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="CONTAINS" />
                 </scg:List>
               </ui:FilterDataTable.Filters>
               <ui:FilterDataTable.SelectColumns>
-                <scg:List x:TypeArguments="InArgument" Capacity="8">
+                <scg:List x:TypeArguments="InArgument" Capacity="16">
                   <InArgument x:TypeArguments="x:Int32">[2]</InArgument>
-                  <InArgument x:TypeArguments="x:Int32">[4]</InArgument>
+                  <InArgument x:TypeArguments="x:Int32">[3]</InArgument>
                   <InArgument x:TypeArguments="x:Int32">[5]</InArgument>
                   <InArgument x:TypeArguments="x:Int32">[6]</InArgument>
                   <InArgument x:TypeArguments="x:Int32">[7]</InArgument>
-                  <InArgument x:TypeArguments="x:Int32">[9]</InArgument>
+                  <InArgument x:TypeArguments="x:Int32">[8]</InArgument>
+                  <InArgument x:TypeArguments="x:Int32">[10]</InArgument>
                   <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
                   <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
                 </scg:List>
@@ -244,12 +245,8 @@
               <TryCatch.Try>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="HTMLtoImage - (L).xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="HTMLtoImage - (L).xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="dt_dataHtml">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="dt_dataHtml" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="usuario">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="usuario" />
-                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="dt_dataHtml">[dt_dataHtml]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="usuario">[usuario]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </TryCatch.Try>
@@ -280,7 +277,7 @@
             </TryCatch>
             <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="607.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="458.4,164.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
