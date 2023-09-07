@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="540,1264" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="599,4898" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>Microsoft.VisualBasic</x:String>
@@ -73,23 +73,23 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="496,1159" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="600,4833" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: NewCon" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="41abbfbf-0bfb-40ac-a668-2387faa8e8ea" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: NewCon" sap:VirtualizedContainerService.HintSize="538,3735" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="41abbfbf-0bfb-40ac-a668-2387faa8e8ea" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="504,3434" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="504,3436" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -125,7 +125,7 @@
                 <uix:TargetAnchorable DesignTimeRectangle="186, 191, 69, 22" DesignTimeScaleFactor="1" FriendlyName="'01/09/2023'" FullSelectorArgument="&lt;wnd cls='TGroupBox' title=' Intervalo: ' /&gt;&lt;wnd cls='TEditPlus' idx='14' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TGroupBox' title=' Intervalo: ' /&gt;&lt;wnd cls='TEditPlus' check:text='01/09/2023' /&gt;" Guid="62e731c0-b627-4baf-800c-6edbf6f38eb8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEkAAAAaCAYAAAD7aXGFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF9SURBVFhH7ZXRFcMgCEWdy4EcIlM4jctkiWxgRRODCEo/+lXeObRRQeBqWnddVzZbm0FSWId0HIcZMRaS6ZVBUsggKWSQFDJICukgpZCdc9VCuue6Ug4ulE+sM0fvczzLoxCbQpub93xi4fv1cWMwEyv7y7l0UkACCHfDZ8x+AAJrkJxAAj8fS9lCLDRZ10EIaB222BQ9arQBaEN+z1Pyh1x9njvQvfaQesN1gBqCZ0g4J4aCPTgJsX39Fh7TtUe7Pan4fX4FaTgJGNIrOydO4S5cip1ukusN9dhBKMe2HhB/cL973b6GpGsIntvvhM+hgGmQ5ubaHAKnqoe/XSAe6lp7SNvrTRrDTShfjV44AVDjacOrPTl/Iul1XmkPCZ9MLYI76XduPCkhloK854dYNhdI2FPy3968vRSQiiCR+BeKITG3RYiFYsf5MRavP9ZvALPnyh+vfXuLQDpIfy6DpJBBUsggKWSQFDJIChkkhURIZqNNkMxkM0hbu/IHYZGWvnayl+8AAAAASUVORK5CYII=" InformativeScreenshot="299421ffa4d8fb91520a53759bbc483c.png" ScopeSelectorArgument="&lt;wnd app='cnp3.exe' cls='TfrmConCpRelContemplacoesDesclassificacoes' title='Contemplações e Desclassificações - 04/09/2023  13:25:45' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '01/09/2023'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="442,226" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="41abbfbf-0bfb-40ac-a668-2387faa8e8ea" Text="[Now.ToString(&quot;ddMMyyyy&quot;)]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '01/09/2023'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="442,226" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="41abbfbf-0bfb-40ac-a668-2387faa8e8ea" Text="[Now.addDays(-1).ToString(&quot;ddMMyyyy&quot;)]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="186, 218, 68, 22" DesignTimeScaleFactor="1" FriendlyName="'01/09/2023'" FullSelectorArgument="&lt;wnd cls='TGroupBox' title=' Intervalo: ' /&gt;&lt;wnd cls='TEditPlus' idx='8' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TGroupBox' title=' Intervalo: ' /&gt;&lt;wnd cls='TEditPlus' check:text='01/09/2023' /&gt;" Guid="c53c4ddd-520d-4ed0-9291-7bf8651f32c3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAaCAYAAAAUqxq7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVFhH7ZXRFcMgCEWdy4EcIlM4jctkiWxg8zQxqBDsR7/KO4c2KghcTeuO48hmshkgxRqgbdvMiLGATFUGSJEBUmSAFBkgRWuAUsjOuWIhXXNNKQcXzk+qPUfvc9zPRyE2hTo373nH4vvxcX0wEyv7y7l0LQACgKvZPWbfwcAaEg+A4OfjWbIQiwbLOkRglmGNTdGTJmvzdcjvuUv+yNXmucN8lw6oNVsGpBk8I9mcFMV6OAmxbf0SHY9rt7Q9R/H7/AJQdwIYjtd0TprCVbQUO90g15ppsZ1IDrUeiD+037xiXwNaawbP9XfB53BCqYDmxuocgbZUD3+rIB6oLB2QeqWHpmgDi69DK3povsSPzb7tyfkPkl5hSTogeiKlAO6En7n+hITYEeI138WyuSBhT8lfvXHvWgB0CknEv0kKiLklQiwK7ef7WLp+Wzt5Zs83f7r2ze2B1gD9sQyQIgOkyAApMkCKDJAiA6RIBGT22ATIjDcD9GpH/gCt9jL4D8kjrAAAAABJRU5ErkJggg==" InformativeScreenshot="c554e6bc6316dcf9e9f2e318760fc469.png" ScopeSelectorArgument="&lt;wnd app='cnp3.exe' cls='TfrmConCpRelContemplacoesDesclassificacoes' title='Contemplações e Desclassificações - 04/09/2023  13:25:45' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NTypeInto.Target>
@@ -209,13 +209,13 @@
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Fechando Newcon&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Controle de Acesso" sap:VirtualizedContainerService.HintSize="434,795" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="1496f339-4a3f-449c-a54c-665783bc8d79" Version="V2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="538,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Fechando Newcon&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Controle de Acesso" sap:VirtualizedContainerService.HintSize="538,795" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="1496f339-4a3f-449c-a54c-665783bc8d79" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>

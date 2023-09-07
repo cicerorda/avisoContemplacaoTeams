@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="PegarGerenteDenodo" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="790,7789" sap2010:WorkflowViewState.IdRef="PegarGerenteDenodo_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="PegarGerenteDenodo" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="790,8146" sap2010:WorkflowViewState.IdRef="PegarGerenteDenodo_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="88">
+    <scg:List x:TypeArguments="x:String" Capacity="46">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -50,7 +50,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="39">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -85,22 +85,19 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PegarGerenteDenodo" sap:VirtualizedContainerService.HintSize="800,7484" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PegarGerenteDenodo" sap:VirtualizedContainerService.HintSize="800,7601" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="TextString" />
-      <Variable x:TypeArguments="x:Int32" Name="count">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_dados" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_dadosContato" />
+      <Variable x:TypeArguments="x:String" Name="dt_textFormat" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -115,14 +112,14 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ReadRange AddHeaders="True" DataTable="[dt_dados]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="338,97" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Report" WorkbookPath="C:\Users\andrade_cicero\Documents\Report.xlsx">
+          <ui:ReadRange AddHeaders="True" DataTable="[dt_dados]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="338,97" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Report" WorkbookPath="C:\Users\app_consorcios_login\Documents\Report.xlsx">
             <ui:ReadRange.Range>
               <InArgument x:TypeArguments="x:String">
                 <Literal x:TypeArguments="x:String" Value="" />
               </InArgument>
             </ui:ReadRange.Range>
           </ui:ReadRange>
-          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="338,89" sap2010:WorkflowViewState.IdRef="DeleteFileX_3" Path="C:\Users\andrade_cicero\Documents\Report.xlsx" />
+          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="338,89" sap2010:WorkflowViewState.IdRef="DeleteFileX_3" Path="C:\Users\app_consorcios_login\Documents\Report.xlsx" />
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
@@ -143,22 +140,22 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ReadCsvFile DataTable="[dt_dados]" Delimitator="Semicolon" DisplayName="Read CSV" FilePath="C:\Users\andrade_cicero\Documents\Report.csv" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" IncludeColumnNames="False" />
-              <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="434,89" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="C:\Users\andrade_cicero\Documents\Report.csv" />
+              <ui:ReadCsvFile DataTable="[dt_dados]" Delimitator="Semicolon" DisplayName="Read CSV" FilePath="C:\Users\app_consorcios_login\Documents\Report.csv" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" IncludeColumnNames="False" />
+              <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="434,89" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="C:\Users\app_consorcios_login\Documents\Report.csv" />
             </Sequence>
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
     <ui:RemoveDuplicateRows DataTable="[dt_dados]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="738,89" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" OutputDataTable="[dt_dados]" />
-    <ui:WriteCsvFile AddHeaders="False" DataTable="[dt_dados]" Delimitator="Semicolon" DisplayName="Write CSV" FilePath="C:\Users\andrade_cicero\Documents\Report.csv" sap:VirtualizedContainerService.HintSize="738,162" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Denodo Data Catalog" sap:VirtualizedContainerService.HintSize="738,6204" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="WindowMessages" ScopeGuid="086b4d47-4fe7-4d8d-8351-84429f4e54ae" Version="V2" WindowResize="Maximize">
+    <ui:WriteCsvFile AddHeaders="False" DataTable="[dt_dados]" Delimitator="Semicolon" DisplayName="Write CSV" FilePath="C:\Users\app_consorcios_login\Documents\Report.csv" sap:VirtualizedContainerService.HintSize="738,162" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Denodo Data Catalog" sap:VirtualizedContainerService.HintSize="738,6220" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="WindowMessages" ScopeGuid="086b4d47-4fe7-4d8d-8351-84429f4e54ae" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="704,5978" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence sap:VirtualizedContainerService.HintSize="704,5994" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Gestor" />
               <Variable x:TypeArguments="x:String" Name="Agencia" />
@@ -172,7 +169,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://virtualizador.sicredi.net/denodo-data-catalog/#/my-query/database/ldw/view/carteiras_por_gerente_atual/167622" DesignTimeRectangle="751, 462, 56, 34" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Ok'" FullSelectorArgument="&lt;webctrl aaname='Ok' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Ok' tag='BUTTON' type='button' class='Button_______334 Popup_button_______319 Button___primary_______348' check:innerText='Ok' /&gt;" Guid="adda0df6-961e-418d-955a-2277d4e041e2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAAAmCAYAAACYsfiPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJLSURBVGhD7ZnbS1RBHMf7g3oOe+mlh8gHX8yXSIgQkyBDJbWyRCylC6gEmuCDJpZKtZmxSq640lrajQ0veEVYbNHWy6667tZevvn7wW5nPbMg7Y60c87DB87MfH8PnzMzZw7MsWg0CiNhbOERxzguXCnDyew8HD+VndGQA7mQk9YxLmwbHRMWqgC56YTPF5UIwypAbjrhrLPnhGEVIDedsCioEqawKKQSprAopBKmsCikEqawKJQOqh80oW/QBqvNjmev+nGxuCJh/OqNGnS9fCP9T0+6cE7+ZTinZvA7FIJrxY3ZhSWsedYRCAbR22eN51rau7Cx5UXl3YcJ9elGurBj4gu8vm3UNbYk9L8eGILfv4fWp93cVkK4vOY+Nvclui1vdWMnzuRiem4B80vL/HxQuOj6bR4bfv9RV5sKUoWfdDxn4WSzRkt6y+tD6Z26BGGSXXat4Pv0LG8JUe2/IlX4Rf8gdnb9SYW1krHnR81t0mQJqcKP2zp5Bu81NAvHLdYh/oAVlN5kYd/2DlZ/evglJatJFanCtDQ965uwj03oxuj4cf1w47NzktskHAz+wvhXJ+NeXeP6g3WpIlWYoLN1LxDAO7sDp3Pzua+wrAoz84s8+1X1DdynXd60lOn4IjJqD8fo6LHw0RQKhVk+HA7zPq2o/bu3tcLULr5Vy6vjw6dv8Uw6OBLhGJeuVfJRJeNjdFiOVPh/wBQWhVTCFBaFVMIUFoVUQidsuKsWw12mGe66lDDUhbiWSCSy/6Of2ZCDyE0orC5R/AFCoTsFfCEC7gAAAABJRU5ErkJggg==" InformativeScreenshot="d44bcf32da751d88cb46431e828b4088.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Denodo Data Catalog' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="770, 471, 18, 16" ElementType="Text" FriendlyName="'Ok'" FullSelectorArgument="&lt;webctrl aaname='Ok' parentid='denodo-popup' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Ok' parentid='denodo-popup' tag='SPAN' type='' class='Button_text_______335 Text_______162 Text___actionPrimary_______188' check:innerText='Ok' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAUCAYAAACJfM0wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGuSURBVDhP7ZLbK4NhHMf9Qa5dunGhXLjZnVpJwg1CbM5pDjnUSA21C4fmFGZoZNTK+djk0Ji1WrMwdsBsbPXl+eV9vO8OReLKxbee5/d8f5/3eb7vLyU1PQu/oX8w19+CGzt6YFhagXHFjNGZeeSWKCTnxdVN0E3PIaeoTFIXSwLOlhfCcnKG10gETpcbVpsdN547hMJhTBqM3Nc3qMO9zw9lcyevxUoCXt/Zhz/wgNbuPolpdtGEYPAZA8PjtP8WuKqpHd5387h+Ic6UlinD6bkNF3YHrWPBRZX1dLa6tsV7OLh/aIzAyW7BovD5AyhvaJWAGdThdOHo1EpRCn4OnppfwuNTMClYDBPWXRptQigTB/dqR+hGLWqNxCBIbzTRj8wvryFw4OER17ceukyiHg5mT/LceWHe2IkzsbFyXrmxZzmmPQOHwy/YPrCQ3Nc31C/u4WAmNpvPoRCWzevIkMmpVlBRh7OLS3pNXZuaauJYWARsLJkSZixoaEJPIxeJROkj0WiUclSoPrMXg9m+pFZFr93cPeSeOLCgvFIljWDsT/mqkoJ/qn/wh7LwBo7lktu0e58HAAAAAElFTkSuQmCC" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -183,20 +180,20 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://virtualizador.sicredi.net/denodo-data-catalog/#/my-query/database/ldw/view/carteiras_por_gerente_atual/167622" DesignTimeRectangle="298, 460, 290, 34" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='Button_______334 Button___xl_______351 Button___primary_______348 Button___wide_______350' aaname='Sign in' check:innerText='Sign in' /&gt;" Guid="88be15bd-a8c5-45d0-9156-b6fb7356255f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASYAAAAmCAYAAABpszZuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQPSURBVHhe7d09aBNhHMdxt8ZF+xJbX9AurYrFTbdixgiuQubi0iHoFBCCQ7uYpXVIloDgUDoUl3RIOpQOEgi0FEoKkqE0kFBIoBgoWXLTz/+Ty8td8xjbNI0X7xf4yOXuubNg78tz16u54Rm7i7rxq7g3tG5O3KeuHpBLqfNjZHRKTNp4OkxJQ/qrHSaXB0rRn5j0Z/pvaBo29n9Xz/h9jEgLzgdJHyWhCctV2cI08egJZl74MDf/Gs99b4iIrt3cvF+680r687gzTN7pp9qdiIgGxTv9xB6m2Zc+7UAiokFRHbKF6ZlMp3QDiYgGRXXIFibdICKiQWOYiMhxGCYicpxGmNSP5xgmInIG1aNGmKa0A4iIBk09bc4wEZGjMExE5DgMExE5DsNEYgEL0SRSOz/qNqIf4W9tCyK8soq3tvH94f+wivDSgnYbuRvD5HqfkCgYgFFBvlAUFZwBqJX2EQnI9nAGpzCQXT+/39WtHcnfW8rgvWYbuRvD5HbfjyVDZaRClnWBCDZ2klhsvPcHrmtWsyDH1q0nt2OY3G6r2BkmmyRyRhnplcb7UAJ7parsI6+qrI9vy/ZjbFjG7m3+QL4qsyF51aqy7Q/HXt4to3aUtCxnsHZQrs/Y5OA42Y1bLinJTRgmtwvEsVfvjIHTwiFS6zEsvrOO2UZeIrEXVcvm2LOfCYTUTOddDKmC2rmIRGusugzMIPJBZlky80qVZMVRwnK8tsiB7FvYbi+jguymeT/rbTwngaogvdS5H/3/GCaSgHxEZHMfWZkJ1SQPKlLt2YolTOs51Iwcvtr2V9utYWpGzOTfKbfic15HmGzjVATtxyL3MMMkfzBMZApiOS2XVeqGd1y9t8RGXfZVDxGxje8epvo+DBNdUjtMQjeA/ne6G9DmJVt+Sy1bYqNulF9yxsQwUS8YJpdb3q0Av3LY+BxsrTPv7zSjYIlNIIGcAZykY43LvCC+qKAwTNRnDJPbBZo3sNXLaN1jyrfiY4+NP7qPE/UDN0PGGlXkNjM4YZioz+phMj+ShWFytyAWlyIIha1PfV9A9FBmV8dY020j6lErTIpuAFFbDOlSGdmtbwipiKlnmGSic3bA542ov0bGJhkmujj/UgLpoyJOqwbOSkVkd2LX8nt05G4MExE5DsNERI7DMBGR43gYJiJyGo/0iGEiIkexhYkfEU5E/1r9I8KtYZp96dMOJCIaFNUhW5gmHj3WDiQiGhSvdMgWJmX84SxmXrziZR0RDcyc9EZ1Z0L6o6LUESanaP5i8YU1/rO74XLXvcbJSj23M3Lb24M7baOW5StRX0sPNOfx3zQjpOPIMFlpQ9SNNgLDQL5JqTvNST3sukbpVjcSkSZtYHqhvpYeac7dv9EFyTSJ34wzUs14RqFkAAAAAElFTkSuQmCC" InformativeScreenshot="3469bb1fed0852af683eb4b9983860d9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Denodo Data Catalog' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="423, 469, 42, 16" ElementType="Text" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl aaname='Sign in' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Sign in' tag='SPAN' type='' class='Button_text_______335 Text_______162 Text___actionPrimary_______188' check:innerText='Sign in' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAUCAYAAADyWA/8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJESURBVEhL7ZYxa+pQFMffF+pneKND10Jm6eIQXqdAQd6gS7O0b9Al8OAN4iBd4qAO4lACAUUQhUcGMRAREpAnSJZk+r9zjSb31kTa0lQKDfzhJuecm98995ybfLv4fonPqC/wj9YX+EfrGXgRxVoH3cHTTq3aLQqxTUb5/gFXgv/7qHDzgHKlmGrLEgf+E7oTAuEGtrMkbbAFELhjqBLZyybWCDFtJsHvpcac3uua+JFiy1IC/rggTA9dhXOQVLQGHZT29wXpdVl5uYo0d9rzbCXgveUxuKAOrNCDcb+/V3SMXJ9i6PLpudYn+wItznfUfoLtUzbpCnyyZcxdHXoI5h1ubKIx8XY7TpNjNdS4ko2UgEsaRjuOEGtnhm6zjtI179yHTZOMamwc+W7/6lBYpq7r6DoseAk99mVlZkK9oV2ineu69GCuc/MlUicU6/STMTaYtqN+utIsWsAGRkWMEZtTuoXaHmNKmQwonC0iWS0H3rQQhBZ+87E7Ow9+WGSkwsCL4Z7rCFzwY0kS52ISwQXJqBq0bawhNXbPwbCy8mdQBf/T4LuYfMDTGiQqCbvHxhwMa+RXZjw38OpwA/yz0LqTY2NUX4cgDkbSqfmAlVHfl5GMX+yFZ8m4dGgwdoVxjdsxnAhTqI2xYgdGSL6hD6ttYnWeUjlIRqmiQinzX80XqDaj3VmgkWbLQSea85TqMFwP094fKGyR7AynRG0nx+dtXnojOJVKRYcxX2JNH5itu8R0UM/lPyZLbwY/tz4p+CX+A7Fcaa3bUa2kAAAAAElFTkSuQmCC" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_dados]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="642,5236" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_dados]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="642,5252" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="608,5110" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="608,5126" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="cpfCnpj" />
                     </Sequence.Variables>
@@ -243,14 +240,14 @@
                       </If.Else>
                     </If>
                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="546,101" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;cpfCnpj: &quot;+cpfCnpj]" />
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,4294" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,4310" sap2010:WorkflowViewState.IdRef="Sequence_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="484,737" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="484,403" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                         <TryCatch.Try>
                           <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="086b4d47-4fe7-4d8d-8351-84429f4e54ae" Version="V3">
                             <uix:NClick.Target>
@@ -259,10 +256,10 @@
                           </uix:NClick>
                         </TryCatch.Try>
                         <TryCatch.Catches>
-                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="406,565" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_6">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
@@ -310,7 +307,7 @@
                         <uix:NClick.Target>
                           <uix:TargetAnchorable BrowserURL="https://virtualizador.sicredi.net/denodo-data-catalog/#/my-query/database/ldw/view/carteiras_por_gerente_atual/167622" DesignTimeRectangle="751, 411, 56, 34" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Ok'" FullSelectorArgument="&lt;webctrl aaname='Ok' parentid='denodo-popup' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Ok' parentid='denodo-popup' tag='BUTTON' type='button' class='Button_______334 Popup_button_______319 Button___primary_______348' check:innerText='Ok' /&gt;" Guid="2b76329c-154d-4c4b-8648-f975e66fa530" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAAAmCAYAAACYsfiPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKESURBVGhD7ZnvS1NRGMf7g+p11At704vQF72x3kRCRJQEGSmllRViGf0Ai0ALfJGFZVEtM5bkokWztF8sSjFNhGFDm+mmza22fes87LnduTNZuzt17939wgfuPc85Lz6759xz2VkFQ0khlUqTbjF7DApbLxnCT32D2L63DusrtmLNhgpLIxyEi3DSRxP2PBuQDrQDwo2jCW+rPiDtvDLlWF2WRlo3B8KNowmvK98i7bwyOuEyWd0cCDeOJizrmBdpYWnNRHCMC1sEjiP815h8/TIcg8LWeGkJOMUTltbNA8dZw3aFo1z4xNmL6OnzwO3x4sa9Xuyoqc+o7zvchK67Dwr80ssfjjLhzVV74P84gp+JBAJTQYyOT2AmNItYPI7bPW6tX/vVLnybD6Ph5LmM8cWGo0zYN/QG4cgCWi60Z7Tff9SPaHQJV651070thA81ncHcb4lu18Os2tpNlRj+NI6xiUm6Xi5cffAY1Z48f5k11ggcJcKXO2+ScK6nJqb0fDiC2uMtGcJCdjIwhffDo7QkZGMLhaNE+E5vHxa/R3MK6yX5+nxbhzJZAUeJ8KWO6/QET7W2Sesudz+9wHbVHiHhyMIipr+G6EfKNcYoHCXCYmqGZufgHRjKqontJ/AliNf+D3QvhOPxHxh86yeC0zM0fvk4o3CUCAvE3roUi+Gx14eNlVXUtruuESNjn+npN55upTb99BZTWWxfAkutYabzlou2pkQiSfLJZJLWaX3zn7WtFxb3NUebaXa8ePVO61MMOEqFmZ37G2irUvEyyhfOPxE2AxxH2K5wHGG7wnGE7QpHEy7sqMUaSI9aVP/F8j+RHqaV3HGpSEkdiJdKSkwY+AXMQlaAKMQV+gAAAABJRU5ErkJggg==" InformativeScreenshot="d70fc49db519a40f4e70ab3731c747f5.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Denodo Data Catalog' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target DesignTimeRectangle="770, 420, 18, 16" ElementType="Text" FriendlyName="'Ok'" FullSelectorArgument="&lt;webctrl aaname='Ok' parentid='denodo-popup' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Ok' parentid='denodo-popup' tag='SPAN' type='' class='Button_text_______335 Text_______162 Text___actionPrimary_______188' check:innerText='Ok' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAUCAYAAACJfM0wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGuSURBVDhP7ZLbK4NhHMf9Q65dunGhXLjZnVpJwg1CbM5pDjnUSA21C4fmFGZoZNTK+djk0Ji1WrMwdsBsbH15fnkf77tDkbhy8a3n+T3f3+d9nu/7S0lNz8Jv6B/M9bfgxo4eGJZWYFwxY3RmHrklCsl5cXUTdNNzyCkqk9TFkoCz5YWwnJzhNRKB0+WG1WbHjecOoXAYkwYj9/UN6nDv80PZ3MlrsZKA13f24Q88oLW7T2KaXTQhGHzGwPA47b8Frmpqh/fdPK5fiDOlZcpwem7Dhd1B61hwUWU9na2ubfEeDu4fGiNwsluwKHz+AMobWiVgBnU4XTg6tVKUgp+Dp+aX8PgUTAoWw4R1l0abEMrEwb3aEbpRi1ojMQjSG030I/PLawgceHjE9a2HLpOoh4PZkzx3Xpg3duJMbKycV27sWY5pz8Dh8Au2Dywk9/UN9Yt7OJiJzeZzKIRl8zoyZHKqFVTU4ezikl5T16ammjgWFgEbS6aEGQsamtDTyEUiUfpINBqlHBWqz+zFYLYvqVXRazd3D7knDiwor1RJIxj7U76qpOCf6h/8oSy8AX+XmAMEWaElAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
@@ -335,7 +332,7 @@
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable BrowserURL="https://virtualizador.sicredi.net/denodo-data-catalog/#/my-query/database/ldw/view/carteiras_por_gerente_atual/167622" DesignTimeRectangle="842, 434, 118, 18" DesignTimeScaleFactor="1" FriendlyName="'ELIZABETE GUID...'" FullSelectorArgument="&lt;webctrl aaname='*' parentid='pill-query-results' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pill-query-results' tag='SPAN' type='' class='' /&gt;" Guid="62737764-e364-45a6-aeca-6b695bcf1bf6" ImageBase64="" InformativeScreenshot="fc177d98989ee82f4ad6c025de9bf7bb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Denodo Data Catalog' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                     <uix:Target DesignTimeRectangle="846, 411, 113, 16" ElementType="Text" FriendlyName="'nome_gestor_carteira'" FullSelectorArgument="&lt;webctrl aaname='nome_gestor_carteira' class='TableGrid_truncatedCellText_______298' parentid='pill-query-results' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='nome_gestor_carteira' class='TableGrid_truncatedCellText_______298' parentid='pill-query-results' tag='SPAN' type='' check:innerText='nome_gestor_carteira' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHUAAAAUCAYAAACzrHJDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQoSURBVGhD7VdrU05RFPaHfDBmfDDjMhmMkCZJUYY0NS5No5qQSlK6CSGRRLqpdJ/Q/SJNmYoo3d+uKv2J5Txr2sdpd857mRrqdT48M3ufvfdae69n3c6WhV9LZMK5YJLqhDBJdUKYpDohTFKdECapTgiTVAlDYxN04nwwvSwq013fDDBJleBUpIrH3H3ynGKSHtD2/e7k4uFH75va1M3Dyp6Y5HTa6erF69j3Y2Rsxfmkh1kUHBlH21zcKCA0krr7+ulmykPe73HuEnX1fOH984u/qLqumb9t3XOY/C6GU1vnZ1WXLYxPTqtycc+cwrfk4X9JJcOW/Pq2DnXNzTeICstqaGBklN+AbwDGeNfs/AK9LqmgQ97+qqzWT12sA7Li72VQUFgUpWY8p1MXQvmM0GMEPVvim95eR7GK1IMnz1FeaQWV19aRd2AIX3ZiaobGLFMUFB5Nnsqekqp3DIzPBkfQyLhl1fnsghK+8O5jPvSioJSNBqMkpj9lfbWNLbTP8ww9zsmn2oYWxRme0RHfQHYCcScjwMiQA/k4D/KuxqWwwQWp1uQPjY6TV0AIRSXd57X8sioKj03i7z3935nszFeF/K45RRfGsi7Mmzs6WRdIBTHQAWeZnv254r4yZFtWvmugy9dvsWy9/Y5iFanatIOx8Na65nba636aPVSsY4xv1R+aVp2HI8AhsgtLeG6ZnqWQyNtsADFOePBE9XYQBSOnZeao8o0wpGQHRGVGTp56XqvflnxBavKjLB6LPbIcni/v1eoatUxyFkKmgFy8CfqgV8ixBj1bQo52z1pgN6kYw4MHl9OtfEY+Lwwrz2EAsVekOS2uRCfQ1OycqkMP3b1fOQpr6v94tt5drMlHGRARh2ySoUQhDCu/Q08XoCXSUVIhW7blesKhSIUBGts/qevWItUaqWJ8404aRwLOCiAKtJGjB3sj1Zp8ERk/FxaprrWDDnid5dSplcNylyM1LfPFukaqbMv1hN2kWqZnuAGyVVNlEuU5DIA56siOg8e5DqGulda8V4yUTgPDo6p+I8CQck29Fp/KzZnQZ01+/+AQNzRIxVhD/d911IdJnVTKBupbWGwiz1FG0IRpdenVVEdINaqp6AP6vg2ww+aVVvI74UwoY7AxGj3XUwHsFHpyBewmFXN7ul97SYXXw0CiA0UTlZVXbLPJENB2v+he0ZxZ63618oHcN+Xk5hfEa+ie0d3CiDgHWXgj5MEB8N1W9+sIqYBR98ukKncW90FHjawgSMVd5VIgQyV1IwHEwHhGwDrSpjAqAOOD3OLK2hWy/gVAst69BWxF2lqxIUmFxyPyjYCU+DS3iFMuohHpC+kMvyy9/QO6Mv8mcD+9ewvMzM3rnlsvbEhS7QHSFGo8UhdwISKGPnb36O7937BpSTVhDJNUp8MS/Qafn/zS/CMqbgAAAABJRU5ErkJggg==" SearchSteps="Selector" />
                                   </scg:List>
                                 </uix:TargetAnchorable.Anchors>
@@ -388,7 +385,7 @@
                               <uix:NGetText.Target>
                                 <uix:TargetAnchorable BrowserURL="https://virtualizador.sicredi.net/denodo-data-catalog/#/my-query/database/ldw/view/carteiras_por_gerente_atual/167622" DesignTimeRectangle="842, 457, 117, 20" DesignTimeScaleFactor="1" FriendlyName="'EVERTON ELIAS ...'" FullSelectorArgument="&lt;webctrl aaname='EVERTON ELIAS ' parentid='pill-query-results' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pill-query-results' tag='SPAN' type='' class='' /&gt;" Guid="341a2e08-37da-467e-8765-3d0b57465ca5" InformativeScreenshot="c5077e2559d62a28758d13a3b3f02ac2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Denodo Data Catalog' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                       <uix:Target DesignTimeRectangle="846, 411, 113, 16" ElementType="Text" FriendlyName="'nome_gestor_carteira'" FullSelectorArgument="&lt;webctrl aaname='nome_gestor_carteira' class='TableGrid_truncatedCellText_______298' parentid='pill-query-results' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='nome_gestor_carteira' class='TableGrid_truncatedCellText_______298' parentid='pill-query-results' tag='SPAN' type='' check:innerText='nome_gestor_carteira' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHUAAAAUCAYAAACzrHJDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQoSURBVGhD7VdrU05RFPaHfDBmfDDjMhmMkCZJUYY0NS5No5qQSlK6CSGRRLqpdJ/Q/SJNmYoo3d+uKv2J5Txr2sdpd857mRrqdT48M3ufvfdae69n3c6WhV9LZMK5YJLqhDBJdUKYpDohTFKdECapTgiTVAlDYxN04nwwvSwq013fDDBJleBUpIrH3H3ynGKSHtD2/e7k4uFH75va1M3Dyp6Y5HTa6erF69j3Y2Rsxfmkh1kUHBlH21zcKCA0krr7+ulmykPe73HuEnX1fOH984u/qLqumb9t3XOY/C6GU1vnZ1WXLYxPTqtycc+cwrfk4X9JJcOW/Pq2DnXNzTeICstqaGBklN+AbwDGeNfs/AK9LqmgQ97+qqzWT12sA7Li72VQUFgUpWY8p1MXQvmM0GMEPVvim95eR7GK1IMnz1FeaQWV19aRd2AIX3ZiaobGLFMUFB5Nnsqekqp3DIzPBkfQyLhl1fnsghK+8O5jPvSioJSNBqMkpj9lfbWNLbTP8ww9zsmn2oYWxRme0RHfQHYCcScjwMiQA/k4D/KuxqWwwQWp1uQPjY6TV0AIRSXd57X8sioKj03i7z3935nszFeF/K45RRfGsi7Mmzs6WRdIBTHQAWeZnv254r4yZFtWvmugy9dvsWy9/Y5iFanatIOx8Na65nba636aPVSsY4xv1R+aVp2HI8AhsgtLeG6ZnqWQyNtsADFOePBE9XYQBSOnZeao8o0wpGQHRGVGTp56XqvflnxBavKjLB6LPbIcni/v1eoatUxyFkKmgFy8CfqgV8ixBj1bQo52z1pgN6kYw4MHl9OtfEY+Lwwrz2EAsVekOS2uRCfQ1OycqkMP3b1fOQpr6v94tt5drMlHGRARh2ySoUQhDCu/Q08XoCXSUVIhW7blesKhSIUBGts/qevWItUaqWJ8404aRwLOCiAKtJGjB3sj1Zp8ERk/FxaprrWDDnid5dSplcNylyM1LfPFukaqbMv1hN2kWqZnuAGyVVNlEuU5DIA56siOg8e5DqGulda8V4yUTgPDo6p+I8CQck29Fp/KzZnQZ01+/+AQNzRIxVhD/d911IdJnVTKBupbWGwiz1FG0IRpdenVVEdINaqp6AP6vg2ww+aVVvI74UwoY7AxGj3XUwHsFHpyBewmFXN7ul97SYXXw0CiA0UTlZVXbLPJENB2v+he0ZxZ63618oHcN+Xk5hfEa+ie0d3CiDgHWXgj5MEB8N1W9+sIqYBR98ukKncW90FHjawgSMVd5VIgQyV1IwHEwHhGwDrSpjAqAOOD3OLK2hWy/gVAst69BWxF2lqxIUmFxyPyjYCU+DS3iFMuohHpC+kMvyy9/QO6Mv8mcD+9ewvMzM3rnlsvbEhS7QHSFGo8UhdwISKGPnb36O7937BpSTVhDJNUp8MS/Qafn/zS/CMqbgAAAABJRU5ErkJggg==" SearchSteps="Selector" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
@@ -412,7 +409,7 @@
                         <uix:NGetText.Target>
                           <uix:TargetAnchorable BrowserURL="https://virtualizador.sicredi.net/denodo-data-catalog/#/my-query/database/ldw/view/carteiras_por_gerente_atual/167622" DesignTimeRectangle="338, 431, 125, 24" DesignTimeScaleFactor="1" FriendlyName="'02...'" FullSelectorArgument="&lt;webctrl aria-role='gridcell' idx='9' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='gridcell' type='' tag='SPAN' class='TableGrid_cell_______293 TableGrid_cell___notLast_______295' aaname='' /&gt;" Guid="29d95cfa-15ad-45a9-91e9-3d7d0ea0b5ca" InformativeScreenshot="1f1ccd7cfb4b186dc79fd4bce646e0dd.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Denodo Data Catalog' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target DesignTimeRectangle="342, 407, 125, 24" FriendlyName="'cod_agencia'" FullSelectorArgument="&lt;webctrl aria-role='gridcell' idx='3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='gridcell' type='' tag='SPAN' class='TableGrid_headerCell_______294 TableGrid_cell___notLast_______295' aaname='' check:innerText='cod_agencia' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIEAAAAcCAYAAABGWNzNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQ2SURBVGhD7VpZTxRBEOYP+WBMfDDxCMYYLyR4RBSNIhEUCeItCkQERQ455Vg5BC/EeIHghYuggHgQNSgKuBzLIb6qD/JS7lfQk9l2Zl0SxXWnK/kyx9c91T31dXXNZgNImeVNiUAZBYyNfyEFa0OJQEGJwAr4MTExlfiJz2VeicACkE3mlQgsANlkXonAApBN5pUILADZZF6JwAKQTeZnTAT37S20eO0W6nj12pD/HzDgHKYDx9Noz9EU6h8YMmzji5BN5pUIponunj6GEeerkE3mPYrgQ+8nSjydS/OWr6c5S4IpMS2H75lx7z/2an3bX3TS5l37adbCFXwsrrzitQhGP4/Tg+anFBa9j2YHBtGC1aF0tvwiOUfHmB90jriuL7BvoKCsiqIOJFDKmbNa/9r7dgrZFq35b257rj2/4sp15iqrb1BQWCT7OJScQY7BydUNP1U1N2nZhvBf+sNHbPwJV1snjYx9pprbDZoftK++eYf9C1++ANlk3lQEvY4BityfQGu3x/BEbzU8pN1HjvPLlTkA51tjDtLHPge9c4lhY1ScGx8aGee1CPqHnFR6qYZ91j9sogKXAOavCqXae4+YRxARuNTsIuZxxLUQQX1jE/tCP/BpeSW0MmwHdXS+cet/OCWD55NVVM7X8IcAFp2/PCmuqf6ncovpdL6NhoZH3USAhVBSVc3PEOMIDNlMrc9fanPxBcgm86YiQPpeFLyJHrc+0+6JlWjE4Rz3ECgEAUHT89PZDuAHKx0ZBsFIL7DxikXwsBdDjPGpmdp4EBAEBgES56k5hdqKRLtjadkcbFzjOetcAu2eymo44hr3kerXR8Syf9EfK16c60WAzJGUnssCQvAzC8/xEXNFW1+BbDJvKgK8EKQ5rGpvOP2LNOKnIwL7k3YOfn5pJb3u6ibbhat8zUGa8oN7or1eBIJHepYRl5DKxR2eYyYCjA/jrHtg156vh14EV2/V87guXr9NnW+7XBnHxoLwGxFgIphgY0urV9yfzASyiPRB8jYTHD2ZNVnEufoK9Dj6eUV7EoHIBFlFZdrq10MvApzvPJjoOp+sJYSA/EYEZjUBAoxJx8Qn/7WaoLmtg0Uk9nykcZEJwOOIFSd47PnYOhAU8Bjr3KVr+D74a3V3OW13fejR+puJAIE3qgkyC0tZdHoR4LkYJ9qhLkhKz/OvTAD8q68DvGxU7vgqwB5bWHGJQsKjNRHovw7Aozjz9HWAqh3bB/qB9yQC4d+brwMUsBAo5o+aBePwq0zwtyBeuNinZeiDYwYEGcWauEaaj9gbrxV+Cu6QTeZnXAQIHrYMBNoI4PQBNgLSPVY+jljx+NRDWrY/bTNsb3XIJvMzLoI/AWw7YivCHowflVCrGBVyCn4qAoXpQTaZVyKwANTfyxR+CyUCBQr4+u07Kfg/YEb3ASUCi8BcBN/pJ8k+QPVe5ktlAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
@@ -420,7 +417,7 @@
                         </uix:NGetText.Target>
                       </uix:NGetText>
                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,101" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Agencia: &quot;+agencia]" />
-                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="484,547" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="484,897" sap2010:WorkflowViewState.IdRef="TryCatch_5">
                         <TryCatch.Try>
                           <Sequence sap:VirtualizedContainerService.HintSize="400,306" sap2010:WorkflowViewState.IdRef="Sequence_14">
                             <sap:WorkflowViewStateService.ViewState>
@@ -523,6 +520,147 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:WriteCsvFile AddHeaders="False" DataTable="[dt_dados]" Delimitator="Semicolon" DisplayName="Write CSV" FilePath="C:\Users\andrade_cicero\Documents\Report.csv" sap:VirtualizedContainerService.HintSize="738,162" sap2010:WorkflowViewState.IdRef="WriteCsvFile_3" ShouldQuote="True" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="738,61" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="462,243" sap2010:WorkflowViewState.IdRef="Sequence_24">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence sap2010:Annotation.AnnotationText="tentativa pegar dados de arquivo" sap:VirtualizedContainerService.HintSize="400,121" sap2010:WorkflowViewState.IdRef="Sequence_23">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ReadCsvFile DataTable="[dt_dadosContato]" Delimitator="Semicolon" DisplayName="Read CSV" FilePath="\\nas01\consorcio\publico\Administradora de Consórcios\Controles Internos\IV - Estrutura Operacional\Área Técnica\Automação RPA\RPA Aviso Contemplação Teams\ldw-carteiras_por_gerente_atual-1694004401097.csv" sap:VirtualizedContainerService.HintSize="580,162" sap2010:WorkflowViewState.IdRef="ReadCsvFile_3" />
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_dados]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="580,2022" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="546,1897" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Int32" Name="linha" />
+                      <Variable x:TypeArguments="x:String" Name="contato" />
+                      <Variable x:TypeArguments="x:String" Name="contemplacao" />
+                      <Variable x:TypeArguments="x:String" Name="NomeConsorciado" />
+                      <Variable x:TypeArguments="x:String" Name="Grupo" />
+                      <Variable x:TypeArguments="x:String" Name="Cota" />
+                      <Variable x:TypeArguments="x:String" Name="Versao" />
+                      <Variable x:TypeArguments="x:String" Name="DataContemplacao" />
+                      <Variable x:TypeArguments="x:String" Name="CpfConsorciado" />
+                      <Variable x:TypeArguments="x:String" Name="agencia" />
+                      <Variable x:TypeArguments="x:String" Name="Gestor" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="484,70" sap2010:WorkflowViewState.IdRef="Assign_14">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[CpfConsorciado]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[Row(4).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="484,70" sap2010:WorkflowViewState.IdRef="Assign_17">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[CpfConsorciado]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(CpfConsorciado,“\D”,“”)]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,101" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;CNPJ: &quot;+CpfConsorciado]" />
+                    <ui:LookupDataTable CellValue="{x:Null}" LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dt_dadosContato]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="484,301" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnIndex="[7]" LookupValue="[CpfConsorciado]" RowIndex="[linha]" />
+                    <If Condition="[linha.ToString = &quot;-1&quot;]" sap:VirtualizedContainerService.HintSize="484,492" sap2010:WorkflowViewState.IdRef="If_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="400,295" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,101" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;CNPJ: &quot;+CpfConsorciado+&quot; não encontrado.&quot;]" />
+                          <ui:Continue sap:VirtualizedContainerService.HintSize="338,32" sap2010:WorkflowViewState.IdRef="Continue_3" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_20">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <Assign sap:VirtualizedContainerService.HintSize="484,70" sap2010:WorkflowViewState.IdRef="Assign_15">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[linha]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[linha+2]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="484,70" sap2010:WorkflowViewState.IdRef="Assign_18">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[agencia]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[dt_dadosContato.rows(2)(Linha.ToString).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="484,70" sap2010:WorkflowViewState.IdRef="Assign_19">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Gestor]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[dt_dadosContato.rows(6)(Linha.ToString).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,101" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Agencia: &quot;+Agencia+ &quot; Gestor: &quot;+Gestor]" />
+                    <Assign sap:VirtualizedContainerService.HintSize="484,70" sap2010:WorkflowViewState.IdRef="Assign_16">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Object">[row(13)]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Object">[contato]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEachRow>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:WriteCsvFile AddHeaders="False" DataTable="[dt_dados]" Delimitator="Semicolon" DisplayName="Write CSV" FilePath="C:\Users\app_consorcios_login\Documents\Report.csv" sap:VirtualizedContainerService.HintSize="738,162" sap2010:WorkflowViewState.IdRef="WriteCsvFile_3" ShouldQuote="True" />
   </Sequence>
 </Activity>
