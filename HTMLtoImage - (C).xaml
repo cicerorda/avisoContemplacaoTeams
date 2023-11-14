@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1240,3333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1240,5520</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>HTMLtoImage_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="40">
@@ -95,10 +95,9 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="HTMLtoImage" sap:VirtualizedContainerService.HintSize="662,3228" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="HTMLtoImage" sap:VirtualizedContainerService.HintSize="662,5375" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="htmlBody" />
     </Sequence.Variables>
@@ -107,7 +106,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Free online HTML editor - onlinehtmleditor.dev" sap:VirtualizedContainerService.HintSize="600,61" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="727686da-4f07-4680-aad3-39dee71130d9" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Free online HTML editor - onlinehtmleditor.dev" sap:VirtualizedContainerService.HintSize="600,2208" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="727686da-4f07-4680-aad3-39dee71130d9" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -152,13 +151,13 @@
             </uix:NKeyboardShortcuts>
             <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="400,61" sap2010:WorkflowViewState.IdRef="CommentOut_12">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="554,634" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="504,654" sap2010:WorkflowViewState.IdRef="Sequence_19">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="492,532" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="5">
+                  <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="442,532" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="5">
                     <ui:RetryScope.ActivityBody>
                       <ActivityAction>
                         <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="400,348" sap2010:WorkflowViewState.IdRef="Sequence_10">
@@ -245,7 +244,7 @@
               </sap:WorkflowViewStateService.ViewState>
               <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="CommentOut_13">
                 <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,183" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="552,943" sap2010:WorkflowViewState.IdRef="Sequence_29">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -336,7 +335,7 @@
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -387,7 +386,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="442,1982" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="5">
+              <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="442,1982" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3">
                 <ui:RetryScope.ActivityBody>
                   <ActivityAction>
                     <Sequence sap:VirtualizedContainerService.HintSize="400,1798" sap2010:WorkflowViewState.IdRef="Sequence_28">
@@ -401,7 +400,7 @@
                         <uix:NTypeInto.Target>
                           <uix:TargetAnchorable BrowserURL="https://teams.microsoft.com/_?culture=pt-br&amp;country=br#/conversations/19:0fb623bc-bf59-431c-a626-4247d18f3541_2f48416b-b317-4e0b-b06a-d1bb0cc38543@unq.gbl.spaces?ctx=chat" CvElementArea="118, 161, 528, 45" CvTextArea="155, 175, 75, 21" CvTextArgument="Pesquisar" CvType="InputBox" DesignTimeRectangle="356, 88, 391, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Everton Renato'" FullSelectorArgument="&lt;webctrl id='control-input' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='control-input' tag='INPUT' type='' aaname='' /&gt;" Guid="9a9a7c64-5a5e-4e77-96fc-7710581532f9" ImageBase64="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" InformativeScreenshot="0c957a1bc7ef784c3a7f1c6f07791dc4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://teams.microsoft.com/*' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target DesignTimeRectangle="8, 432, 68, 56" ElementType="Button" FriendlyName="'BUTTON ts-waffle-button'" FullSelectorArgument="&lt;webctrl id='ts-waffle-button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ts-waffle-button' tag='BUTTON' type='' class='ts-sym icons-compose icons-white-override inset-border inset-border-round inset-border-themed' aaname='                             ' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFkAAABACAYAAABx0tv8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAH8SURBVHhe7ZmxSgNBFEX9OMFWsBRsBav8gdiKjYWaTlSw1MbGNCFgxE5XiJWShDWJm3QmEK2euUMSUrxVC3Mz4B04MPDuTnGYnZ2ZXarValYoFGw4HIo5MZVcLpfFnNBMJjCVvLyyL+aEJBOQZAKSTECSCUgyAUkmIMkEJJmAJBOQZAKSTECSCUgyAUkmIMkEJJlAVJIPixU7Obuzza1zt766Vgx1gL6XwbOoHxxV3PoiiEYyBE9av//hZqq3L+OEhb6XGQw+xwkLY3oZNtFIPh3NvtnmZZLH13HVQt/LzDaM6WXYRCMZr/lkFl5c3ruZ3b1SqCOHvpe5Lj2FzFv2nrvssNGHj4AkE5BkApJMQJIJRCMZh4ub6rM9JGnuzgG7BdRB3s4Bz6KOsfIOLGyikax9MgFJJoBXG0dlyNveuXIzWCJQR+675QIZHEq0XPwjJJmAJBOQZAKSTCAaydgt4LIeDTsDLzO56kT76aoTY+XtQNhEI1n7ZAKzv59wKe9l9PvpD4AUzL71jWO3jsMF6sjlHTSwRCCTt5wsAn34CEgyAUkmIMkEJJmAJBOQZAKSTECSCUgyAUkmIMkEJJmAJBOQZAKSTECSCUgyAUkmIMkEJJnAVHKv1xO/pNvtWpZl1ul0rN1uW6vVsjRNA81m0xqNhtXrdUuSZERiXwaWHOjGx7WBAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
@@ -557,7 +556,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEtSURBVDhPY8AGGjreydW0vNld0/z6M4gG8aFSxAGQpurm1/9hGMSHShEHQDajGADkg8QDo062Bkae/AyiwQpxgcDQWWfdvNv/B4XPRXEBSHNA5Mn/IBqsEAR8gvc88g7e8x8d+wTv+Onu3fEdOQywugCbZhgGSnNBVOEBIIVLV979jwxAfJC4m1cbPBxKap79ATkfjqNOXoUbAMMggMxHNgCEUQwA4kFoAMzvMIzfgFM/wAbgikbPgM34DYg6tQNsADLwDpz0wcIm97+FTc5/K7uC/57+fXDNVc1vngI17Q6MPPUBpDk07oI0VBsCpOUcXJuUsec/DKflHIYbUNPyehZUGW7Q2vpFvAZoE0wTQvObRy0tbzBtxAZACoEalgAz0GsgfglkL8KdnRkYAFHYrcdRQDYQAAAAAElFTkSuQmCC" InformativeScreenshot="fc384ae2d0deb6feed002ab656b764f3.jpg" Selector="&lt;html app='msedge.exe' url='https://teams.microsoft.com/*' /&gt;" Title="Alinhamento do Dia | Microsoft Teams" Url="https://teams.microsoft.com/_?culture=pt-br&amp;country=br#/conversations/19:meeting_YzYwMGQ3NzYtNWQ0ZS00ZmM0LTlmNDItYjAzZjEzMGJlODg0@thread.v2?ctx=chat" />
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEtSURBVDhPY8AGGjreydW0vNld0/z6M4gG8aFSxAGQpurm1/9hGMSHShEHQDajGADkg8QDo062Bkae/AyiwQpxgcDQWWfdvNv/B4XPRXEBSHNA5Mn/IBqsEAR8gvc88g7e8x8d+wTv+Onu3fEdOQywugCbZhgGSnNBVOEBIIVLV979jwxAfJC4m1cbPBxKap79ATkfjqNOXoUbAMMggMxHNgCEUQwA4kFoAMzvMIzfgFM/wAbgikbPgM34DYg6tQNsADLwDpz0wcIm97+FTc5/K7uC/57+fXDNVc1vngI17Q6MPPUBpDk07oI0VBsCpOUcXJuUsec/DKflHIYbUNPyehZUGW7Q2vpFvAZoE0wTQvObRy0tbzBtxAZACoEalgAz0GsgfglkL8KdnRkYAFHYrcdRQDYQAAAAAElFTkSuQmCC" InformativeScreenshot="fc384ae2d0deb6feed002ab656b764f3.jpg" Selector="&lt;html app='msedge.exe' url='https://teams.microsoft.com/_?culture=pt-br&amp;amp;country=br#/conversations' /&gt;" Title="Alinhamento do Dia | Microsoft Teams" Url="https://teams.microsoft.com/_?culture=pt-br&amp;country=br#/conversations" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>

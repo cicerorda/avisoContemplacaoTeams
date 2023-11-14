@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1240,3659</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1240,3499</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>HTMLtoImage_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="40">
@@ -95,10 +95,9 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="HTMLtoImage" sap:VirtualizedContainerService.HintSize="662,3434" sap2010:WorkflowViewState.IdRef="Sequence_60">
+  <Sequence DisplayName="HTMLtoImage" sap:VirtualizedContainerService.HintSize="662,3394" sap2010:WorkflowViewState.IdRef="Sequence_60">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="htmlBody" />
     </Sequence.Variables>
@@ -113,7 +112,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="712,2012" sap2010:WorkflowViewState.IdRef="Sequence_53">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="712,1982" sap2010:WorkflowViewState.IdRef="Sequence_53">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="retorno" />
             </Sequence.Variables>
@@ -341,7 +340,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Alinhamento do Dia | Microsoft Teams" sap:VirtualizedContainerService.HintSize="600,3211" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="WindowMessages" OpenMode="IfNotOpen" ScopeGuid="ecb3e958-1ddc-4cdd-8c6f-24762a400c41" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Alinhamento do Dia | Microsoft Teams" sap:VirtualizedContainerService.HintSize="600,3171" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="WindowMessages" OpenMode="IfNotOpen" ScopeGuid="ecb3e958-1ddc-4cdd-8c6f-24762a400c41" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -387,7 +386,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="442,2188" sap2010:WorkflowViewState.IdRef="RetryScope_6" NumberOfRetries="5">
+              <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="442,2188" sap2010:WorkflowViewState.IdRef="RetryScope_6" NumberOfRetries="3">
                 <ui:RetryScope.ActivityBody>
                   <ActivityAction>
                     <Sequence sap:VirtualizedContainerService.HintSize="400,2004" sap2010:WorkflowViewState.IdRef="Sequence_55">
@@ -558,7 +557,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEtSURBVDhPY8AGGjreydW0vNld0/z6M4gG8aFSxAGQpurm1/9hGMSHShEHQDajGADkg8QDo062Bkae/AyiwQpxgcDQWWfdvNv/B4XPRXEBSHNA5Mn/IBqsEAR8gvc88g7e8x8d+wTv+Onu3fEdOQywugCbZhgGSnNBVOEBIIVLV979jwxAfJC4m1cbPBxKap79ATkfjqNOXoUbAMMggMxHNgCEUQwA4kFoAMzvMIzfgFM/wAbgikbPgM34DYg6tQNsADLwDpz0wcIm97+FTc5/K7uC/57+fXDNVc1vngI17Q6MPPUBpDk07oI0VBsCpOUcXJuUsec/DKflHIYbUNPyehZUGW7Q2vpFvAZoE0wTQvObRy0tbzBtxAZACoEalgAz0GsgfglkL8KdnRkYAFHYrcdRQDYQAAAAAElFTkSuQmCC" InformativeScreenshot="fc384ae2d0deb6feed002ab656b764f3.jpg" Selector="&lt;html app='msedge.exe' url='https://teams.microsoft.com/*' /&gt;" Title="Alinhamento do Dia | Microsoft Teams" Url="https://teams.microsoft.com/_?culture=pt-br&amp;country=br#/conversations/19:meeting_YzYwMGQ3NzYtNWQ0ZS00ZmM0LTlmNDItYjAzZjEzMGJlODg0@thread.v2?ctx=chat" />
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEtSURBVDhPY8AGGjreydW0vNld0/z6M4gG8aFSxAGQpurm1/9hGMSHShEHQDajGADkg8QDo062Bkae/AyiwQpxgcDQWWfdvNv/B4XPRXEBSHNA5Mn/IBqsEAR8gvc88g7e8x8d+wTv+Onu3fEdOQywugCbZhgGSnNBVOEBIIVLV979jwxAfJC4m1cbPBxKap79ATkfjqNOXoUbAMMggMxHNgCEUQwA4kFoAMzvMIzfgFM/wAbgikbPgM34DYg6tQNsADLwDpz0wcIm97+FTc5/K7uC/57+fXDNVc1vngI17Q6MPPUBpDk07oI0VBsCpOUcXJuUsec/DKflHIYbUNPyehZUGW7Q2vpFvAZoE0wTQvObRy0tbzBtxAZACoEalgAz0GsgfglkL8KdnRkYAFHYrcdRQDYQAAAAAElFTkSuQmCC" InformativeScreenshot="fc384ae2d0deb6feed002ab656b764f3.jpg" Selector="&lt;html app='msedge.exe' url='https://teams.microsoft.com/_?culture=pt-br&amp;amp;country=br#/conversations' /&gt;" Title="Alinhamento do Dia | Microsoft Teams" Url="https://teams.microsoft.com/_?culture=pt-br&amp;country=br#/conversations" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>
