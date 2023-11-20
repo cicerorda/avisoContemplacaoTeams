@@ -1,5 +1,6 @@
 {
   "name": "avisoContemplacaoTeams",
+  "projectId": "a9aeb862-b188-48e3-8c50-d98f42dc4f61",
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
@@ -23,6 +24,7 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -44,7 +46,8 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": true
+    "modernBehavior": true,
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [

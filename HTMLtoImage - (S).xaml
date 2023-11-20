@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1240,863</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1240,1072</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>HTMLtoImage_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="40">
@@ -97,7 +97,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="HTMLtoImage" sap:VirtualizedContainerService.HintSize="538,758" sap2010:WorkflowViewState.IdRef="Sequence_56">
+  <Sequence DisplayName="HTMLtoImage" sap:VirtualizedContainerService.HintSize="552,1007" sap2010:WorkflowViewState.IdRef="Sequence_56">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="htmlBody" />
     </Sequence.Variables>
@@ -106,7 +106,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="476,298" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="490,288" sap2010:WorkflowViewState.IdRef="TryCatch_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -114,13 +114,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Free online HTML editor - onlinehtmleditor.dev" sap:VirtualizedContainerService.HintSize="438,61" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="727686da-4f07-4680-aad3-39dee71130d9" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Free online HTML editor - onlinehtmleditor.dev" sap:VirtualizedContainerService.HintSize="432,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="727686da-4f07-4680-aad3-39dee71130d9" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,1982" sap2010:WorkflowViewState.IdRef="Sequence_49">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,1973" sap2010:WorkflowViewState.IdRef="Sequence_49">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="retorno" />
                 </Sequence.Variables>
@@ -350,7 +350,7 @@
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="442,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="436,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -361,13 +361,13 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="500,365" sap2010:WorkflowViewState.IdRef="Sequence_64">
+            <Sequence sap:VirtualizedContainerService.HintSize="500,335" sap2010:WorkflowViewState.IdRef="Sequence_64">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="438,142" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="msedge.exe" />
+              <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="438,133" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="msedge.exe" />
               <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Free online HTML editor - onlinehtmleditor.dev" sap:VirtualizedContainerService.HintSize="438,61" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="727686da-4f07-4680-aad3-39dee71130d9" Version="V2">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
@@ -607,27 +607,27 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="476,298" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="490,568" sap2010:WorkflowViewState.IdRef="TryCatch_6">
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Alinhamento do Dia | Microsoft Teams" sap:VirtualizedContainerService.HintSize="393,61" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="WindowMessages" OpenMode="IfNotOpen" ScopeGuid="ecb3e958-1ddc-4cdd-8c6f-24762a400c41" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Alinhamento do Dia | Microsoft Teams" sap:VirtualizedContainerService.HintSize="387,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="WindowMessages" OpenMode="IfNotOpen" ScopeGuid="ecb3e958-1ddc-4cdd-8c6f-24762a400c41" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence sap:VirtualizedContainerService.HintSize="566,2769" sap2010:WorkflowViewState.IdRef="Sequence_55">
+              <Sequence sap:VirtualizedContainerService.HintSize="566,2700" sap2010:WorkflowViewState.IdRef="Sequence_55">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="504,2615" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="504,2597" sap2010:WorkflowViewState.IdRef="Sequence_54">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="442,61" sap2010:WorkflowViewState.IdRef="CommentOut_22">
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="442,52" sap2010:WorkflowViewState.IdRef="CommentOut_22">
                     <ui:CommentOut.Body>
                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,288" sap2010:WorkflowViewState.IdRef="Sequence_50">
                         <sap:WorkflowViewStateService.ViewState>
@@ -825,7 +825,7 @@
             </ActivityAction>
           </uix:NApplicationCard.Body>
           <uix:NApplicationCard.TargetApp>
-            <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEtSURBVDhPY8AGGjreydW0vNld0/z6M4gG8aFSxAGQpurm1/9hGMSHShEHQDajGADkg8QDo062Bkae/AyiwQpxgcDQWWfdvNv/B4XPRXEBSHNA5Mn/IBqsEAR8gvc88g7e8x8d+wTv+Onu3fEdOQywugCbZhgGSnNBVOEBIIVLV979jwxAfJC4m1cbPBxKap79ATkfjqNOXoUbAMMggMxHNgCEUQwA4kFoAMzvMIzfgFM/wAbgikbPgM34DYg6tQNsADLwDpz0wcIm97+FTc5/K7uC/57+fXDNVc1vngI17Q6MPPUBpDk07oI0VBsCpOUcXJuUsec/DKflHIYbUNPyehZUGW7Q2vpFvAZoE0wTQvObRy0tbzBtxAZACoEalgAz0GsgfglkL8KdnRkYAFHYrcdRQDYQAAAAAElFTkSuQmCC" InformativeScreenshot="fc384ae2d0deb6feed002ab656b764f3.jpg" Selector="&lt;html app='msedge.exe' url='https://teams.microsoft.com/_?culture=pt-br&amp;amp;country=br#/conversations' /&gt;" Title="Alinhamento do Dia | Microsoft Teams" Url="https://teams.microsoft.com/_?culture=pt-br&amp;country=br#/conversations" />
+            <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEtSURBVDhPY8AGGjreydW0vNld0/z6M4gG8aFSxAGQpurm1/9hGMSHShEHQDajGADkg8QDo062Bkae/AyiwQpxgcDQWWfdvNv/B4XPRXEBSHNA5Mn/IBqsEAR8gvc88g7e8x8d+wTv+Onu3fEdOQywugCbZhgGSnNBVOEBIIVLV979jwxAfJC4m1cbPBxKap79ATkfjqNOXoUbAMMggMxHNgCEUQwA4kFoAMzvMIzfgFM/wAbgikbPgM34DYg6tQNsADLwDpz0wcIm97+FTc5/K7uC/57+fXDNVc1vngI17Q6MPPUBpDk07oI0VBsCpOUcXJuUsec/DKflHIYbUNPyehZUGW7Q2vpFvAZoE0wTQvObRy0tbzBtxAZACoEalgAz0GsgfglkL8KdnRkYAFHYrcdRQDYQAAAAAElFTkSuQmCC" InformativeScreenshot="fc384ae2d0deb6feed002ab656b764f3.jpg" Selector="&lt;html app='msedge.exe' url='https://teams.microsoft.com/_?culture=pt-br&amp;amp;country=br#/conversations*' /&gt;" Title="Alinhamento do Dia | Microsoft Teams" Url="https://teams.microsoft.com/_?culture=pt-br&amp;country=br#/conversations" />
           </uix:NApplicationCard.TargetApp>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -836,10 +836,10 @@
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,405" sap2010:WorkflowViewState.IdRef="Catch`1_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -847,14 +847,14 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="455,365" sap2010:WorkflowViewState.IdRef="Sequence_71">
+            <Sequence sap:VirtualizedContainerService.HintSize="450,336" sap2010:WorkflowViewState.IdRef="Sequence_71">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="393,142" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="msedge.exe" />
-              <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Alinhamento do Dia | Microsoft Teams" sap:VirtualizedContainerService.HintSize="393,61" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" InteractionMode="WindowMessages" OpenMode="IfNotOpen" ScopeGuid="ecb3e958-1ddc-4cdd-8c6f-24762a400c41" Version="V2">
+              <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="388,133" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="msedge.exe" />
+              <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Alinhamento do Dia | Microsoft Teams" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" InteractionMode="WindowMessages" OpenMode="IfNotOpen" ScopeGuid="ecb3e958-1ddc-4cdd-8c6f-24762a400c41" Version="V2">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
@@ -1070,7 +1070,7 @@
                   </ActivityAction>
                 </uix:NApplicationCard.Body>
                 <uix:NApplicationCard.TargetApp>
-                  <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEtSURBVDhPY8AGGjreydW0vNld0/z6M4gG8aFSxAGQpurm1/9hGMSHShEHQDajGADkg8QDo062Bkae/AyiwQpxgcDQWWfdvNv/B4XPRXEBSHNA5Mn/IBqsEAR8gvc88g7e8x8d+wTv+Onu3fEdOQywugCbZhgGSnNBVOEBIIVLV979jwxAfJC4m1cbPBxKap79ATkfjqNOXoUbAMMggMxHNgCEUQwA4kFoAMzvMIzfgFM/wAbgikbPgM34DYg6tQNsADLwDpz0wcIm97+FTc5/K7uC/57+fXDNVc1vngI17Q6MPPUBpDk07oI0VBsCpOUcXJuUsec/DKflHIYbUNPyehZUGW7Q2vpFvAZoE0wTQvObRy0tbzBtxAZACoEalgAz0GsgfglkL8KdnRkYAFHYrcdRQDYQAAAAAElFTkSuQmCC" InformativeScreenshot="fc384ae2d0deb6feed002ab656b764f3.jpg" Selector="&lt;html app='msedge.exe' url='https://teams.microsoft.com/_?culture=pt-br&amp;amp;country=br#/conversations' /&gt;" Title="Alinhamento do Dia | Microsoft Teams" Url="https://teams.microsoft.com/_?culture=pt-br&amp;country=br#/conversations" />
+                  <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEtSURBVDhPY8AGGjreydW0vNld0/z6M4gG8aFSxAGQpurm1/9hGMSHShEHQDajGADkg8QDo062Bkae/AyiwQpxgcDQWWfdvNv/B4XPRXEBSHNA5Mn/IBqsEAR8gvc88g7e8x8d+wTv+Onu3fEdOQywugCbZhgGSnNBVOEBIIVLV979jwxAfJC4m1cbPBxKap79ATkfjqNOXoUbAMMggMxHNgCEUQwA4kFoAMzvMIzfgFM/wAbgikbPgM34DYg6tQNsADLwDpz0wcIm97+FTc5/K7uC/57+fXDNVc1vngI17Q6MPPUBpDk07oI0VBsCpOUcXJuUsec/DKflHIYbUNPyehZUGW7Q2vpFvAZoE0wTQvObRy0tbzBtxAZACoEalgAz0GsgfglkL8KdnRkYAFHYrcdRQDYQAAAAAElFTkSuQmCC" InformativeScreenshot="fc384ae2d0deb6feed002ab656b764f3.jpg" Selector="&lt;html app='msedge.exe' url='https://teams.microsoft.com/_?culture=pt-br&amp;amp;country=br#/conversations*' /&gt;" Title="Alinhamento do Dia | Microsoft Teams" Url="https://teams.microsoft.com/_?culture=pt-br&amp;country=br#/conversations" />
                 </uix:NApplicationCard.TargetApp>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
